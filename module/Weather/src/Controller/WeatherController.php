@@ -5,6 +5,7 @@ use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\ViewModel;
 use Weather\Service\WeatherService;
 use Weather\Service\LocationService;
+use Weather\Exception\WeatherException;
 
 class WeatherController extends AbstractActionController
 {
@@ -23,12 +24,26 @@ class WeatherController extends AbstractActionController
         
         $locations = $this->locationService->getLocations($page, 3);
         $totalPages = $this->locationService->getTotalPages(3);
+        
+        
+        $weatherData = [];
+        foreach ($locations as $location) {
+            try {
+                $weatherData[$location] = $this->weatherService->getWeather($location);
+            } catch (WeatherException $e) {
+                
+                $weatherData[$location] = [
+                    'error' => true,
+                    'message' => $e->getMessage()
+                ];
+            }
+        }
 
         return new ViewModel([
             'locations' => $locations,
+            'weatherData' => $weatherData,
             'page' => $page,
             'totalPages' => $totalPages,
-            'weatherService' => $this->weatherService,
         ]);
     }
 }

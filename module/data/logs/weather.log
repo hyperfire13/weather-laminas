@@ -82,3 +82,24 @@
 2025-10-18T20:49:49+02:00 INFO (6): Weather data fetched for Manila
 2025-10-18T20:49:49+02:00 INFO (6): Weather data fetched for Cebu
 2025-10-18T20:49:50+02:00 INFO (6): Weather data fetched for Davao
+2025-10-18T20:59:39+02:00 INFO (6): Weather data fetched successfully for Cotabato
+2025-10-18T20:59:39+02:00 INFO (6): Weather data fetched successfully for Puerto Princesa
+2025-10-18T20:59:39+02:00 INFO (6): Weather data fetched successfully for Legazpi
+2025-10-18T21:00:01+02:00 INFO (6): Weather data fetched successfully for Cotabato
+2025-10-18T21:00:02+02:00 INFO (6): Weather data fetched successfully for Puerto Princesa
+2025-10-18T21:00:02+02:00 INFO (6): Weather data fetched successfully for Legazpi
+2025-10-18T21:00:12+02:00 ERR (3): Invalid API key for Cotabato
+2025-10-18T21:00:12+02:00 ERR (3): Invalid API key for Puerto Princesa
+2025-10-18T21:00:12+02:00 ERR (3): Invalid API key for Legazpi
+2025-10-18T21:00:17+02:00 ERR (3): Invalid API key for Bacolod
+2025-10-18T21:00:17+02:00 ERR (3): Invalid API key for Zamboanga
+2025-10-18T21:00:17+02:00 ERR (3): Invalid API key for Cagayan de Oro
+2025-10-18T21:01:41+02:00 INFO (6): Weather data fetched successfully for Bacolod
+2025-10-18T21:01:41+02:00 INFO (6): Weather data fetched successfully for Zamboanga
+2025-10-18T21:01:41+02:00 INFO (6): Weather data fetched successfully for Cagayan de Oro
+2025-10-18T21:01:43+02:00 INFO (6): Weather data fetched successfully for General Santos
+2025-10-18T21:01:44+02:00 INFO (6): Weather data fetched successfully for Butuan
+2025-10-18T21:01:44+02:00 INFO (6): Weather data fetched successfully for Iligan
+2025-10-18T21:01:45+02:00 INFO (6): Weather data fetched successfully for Cotabato
+2025-10-18T21:01:46+02:00 INFO (6): Weather data fetched successfully for Puerto Princesa
+2025-10-18T21:01:46+02:00 WARN (4): City not found: Legazpix

@@ -8,32 +8,32 @@
   <div class="container">
     <h1 class="mb-4 text-center">🌦️ Weather Locations</h1>
 
+    <!-- Display weather for each location on current page -->
     <div class="row">
       <?php foreach ($locations as $location): ?>
-        <?php 
-          try {
-            $weather = $this->weatherService->getWeather($location);
-        ?>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <div class="card-body text-center">
-                <h5><?= htmlspecialchars($location) ?></h5>
-                <?php if ($weather): ?>
-                  <p class="fs-3"><?= round($weather['main']['temp']) ?>°C</p>
-                  <p><?= ucfirst($weather['weather'][0]['description']) ?></p>
-                  <small class="text-muted">
-                    Humidity: <?= $weather['main']['humidity'] ?>%<br>
-                    Wind: <?= $weather['wind']['speed'] ?> m/s
-                  </small>
-                <?php endif; ?>
-              </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5><?= htmlspecialchars($location) ?></h5>
+              
+              <?php if (isset($weatherData[$location]['error'])): ?>
+                <!-- Show error message -->
+                <div class="alert alert-warning p-2 m-2">
+                  <small><?= htmlspecialchars($weatherData[$location]['message']) ?></small>
+                </div>
+              <?php else: ?>
+                <!-- Show weather data -->
+                <?php $weather = $weatherData[$location]; ?>
+                <p class="fs-3"><?= round($weather['main']['temp']) ?>°C</p>
+                <p><?= ucfirst($weather['weather'][0]['description']) ?></p>
+                <small class="text-muted">
+                  Humidity: <?= $weather['main']['humidity'] ?>%<br>
+                  Wind: <?= $weather['wind']['speed'] ?> m/s
+                </small>
+              <?php endif; ?>
             </div>
           </div>
-        <?php 
-          } catch (\Exception $e) {
-           
-          }
-        ?>
+        </div>
       <?php endforeach; ?>
     </div>
 
