@@ -4,7 +4,7 @@ namespace Weather\Service;
 class LocationService
 {
     private array $locations = [
-        'Manila', 'Cebu', 'Davao', 'Baguio', 'Iloilo', 
+        'Mansissla', 'Cebu', 'Davao', 'Baguio', 'Iloilo', 
         'Tagaytay', 'Bacolod', 'Zamboanga', 'Cagayan de Oro', 
         'General Santos', 'Butuan', 'Iligan', 'Cotabato',
         'Puerto Princesa', 'Legazpi'

@@ -21,7 +21,7 @@ return [
     'service_manager' => [
         'factories' => [
             WeatherService::class => function ($container) {
-                $apiKey = '7d30a0f5333c7e71dd25699a242a6d69';
+                $apiKey = 'xxx';
 
                 return new WeatherService($apiKey);
             },
